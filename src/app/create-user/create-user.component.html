@@ -1,0 +1,50 @@
+<p>create-user works!</p>
+
+<form [formGroup]="form" (ngSubmit)="save()">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="username">
+
+    <small
+        *ngIf="(form.get('username')?.touched || form.get('username')?.dirty) && form.get('username')?.errors?.['required']">
+        Campo Requerido
+    </small>
+
+    <br>
+
+    <label for="email">Email:</label>
+    <input type="text" id="email" formControlName="email">
+
+
+
+    <small *ngIf="(form.get('email')?.touched || form.get('email')?.dirty) && form.get('email')?.errors?.['required']">
+        Campo Requerido
+    </small>
+
+    <small *ngIf="(form.get('email')?.touched || form.get('email')?.dirty) && form.get('email')?.errors?.['email']">
+        Debe ser un email válido
+    </small>
+    <br>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" formControlName="password">
+
+    <small
+        *ngIf="(form.get('password')?.touched || form.get('password')?.dirty) && form.get('password')?.errors?.['required']">
+        Campo Requerido
+    </small>
+    <br>
+
+
+    <label for="passwordConfirm">password Confirm:</label>
+    <input type="password" id="passwordConfirm" formControlName="passwordConfirm">
+
+    <small
+        *ngIf="(form.get('passwordConfirm')?.touched || form.get('passwordConfirm')?.dirty) && form.get('passwordConfirm')?.errors?.['required']">
+        Campo Requerido
+    </small>
+    <br>
+    <br>
+
+    <button type="submit">Guardar</button>
+</form>

@@ -1,0 +1,118 @@
+<!-- user-create.component.html -->
+
+
+<form [formGroup]="form" (ngSubmit)="save()">
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" formControlName="name">
+  <small appErrorInput 
+  [touched]="NameControls.touched"
+  [dirty]="NameControls.dirty"
+  [errors]="NameControls.errors"
+   ></small>
+
+
+  <label for="age">Age:</label>
+  <input type="text" id="age" formControlName="age">
+  <small appErrorInput 
+  [touched]="AgeControls.touched"
+  [dirty]="AgeControls.dirty"
+  [errors]="AgeControls.errors"
+   ></small>
+
+  <label for="type">Type:</label>
+  <input type="text" id="type" formControlName="type">
+  <small appErrorInput 
+  [touched]="TypeControls.touched"
+  [dirty]="TypeControls.dirty"
+  [errors]="TypeControls.errors"
+   ></small>
+
+   <label for="vaccinated">Vaccinated:</label>
+   <input type="text" id="vaccinated" formControlName="vaccinated">
+   <small appErrorInput 
+   [touched]="VaccinatedControls.touched"
+   [dirty]="VaccinatedControls.dirty"
+   [errors]="VaccinatedControls.errors"
+    ></small>
+
+    <label for="color">Vaccinated:</label>
+    <input type="text" id="color" formControlName="color">
+    <small appErrorInput 
+    [touched]="ColorControls.touched"
+    [dirty]="ColorControls.dirty"
+    [errors]="ColorControls.errors"
+     ></small>
+
+  <br>
+  <br>
+  <br>
+  <button type="submit">Guardar</button>
+</form>
+
+
+
+
+<!-- <p>cars works!</p>
+
+<div>
+    <h2>Car Form</h2>
+    <form [formGroup]="form" >
+      <label>
+        Name:
+        <input type="text" formControlName="name">
+      </label>
+      <br>
+      <label>
+        Number of Doors:
+        <input type="number" formControlName="numberDoors">
+      </label>
+      <br>
+      <label>
+        Price:
+        <input type="number" formControlName="price">
+      </label>
+      <br>
+      <label>
+        New:
+        <input type="checkbox" formControlName="new">
+      </label>
+      <br>
+      <label>
+        Color:
+        <input type="text" formControlName="color">
+      </label>
+      <br>
+      <button type="submit" [disabled]="!form.valid">Submit</button>
+    </form>
+  </div>
+   -->
+
+
+
+<!-- <p>pets works!</p>
+
+<div>
+    <form [formGroup]="form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" formControlName="name">
+      <div *ngIf="form.controls['name'].dirty">Name is dirty</div>
+  
+      <label for="age">Age:</label>
+      <input type="number" id="age" formControlName="age">
+      <div *ngIf="form.controls['age'].touched">Age is touched</div>
+  
+      <label for="type">Type:</label>
+      <input type="text" id="type" formControlName="type">
+      <div *ngIf="form.controls['type'].status === 'PENDING'">Type is pending</div>
+  
+      <label for="vaccinated">Vaccinated:</label>
+      <input type="checkbox" id="vaccinated" formControlName="vaccinated">
+      <div *ngIf="form.controls['vaccinated'].pristine">Vaccinated is pristine</div>
+  
+      <label for="color">Color:</label>
+      <input type="text" id="color" formControlName="color">
+      <div *ngIf="form.controls['color'].dirty">Color is dirty</div>
+    </form>
+  </div> -->
+  
